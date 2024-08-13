@@ -1,0 +1,54 @@
+/* 3. Preloader */
+#preloader {
+	position: fixed;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	background-color:#ef6a8a; /* change if the mask should have another color then white */
+	z-index:9999999; /* makes sure it stays on top */
+}
+
+.spinner {
+	position:absolute;
+	left:50%; /* centers the loading animation horizontally one the screen */
+	top:50%; /* centers the loading animation vertically one the screen */
+	width: 50px;
+	height: 30px;
+	text-align: center;
+	font-size: 10px;
+	margin-left:-25px;
+}
+
+.spinner > div {
+	background-color: #fff;
+	height: 100%;
+	width: 6px;
+	display: inline-block; 
+	animation: stretchdelay 1.2s infinite ease-in-out; /* Replaced -webkit- with standard property */
+}
+
+.spinner .rect2 {
+	animation-delay: -1.1s; /* Replaced -webkit- with standard property */
+}
+
+.spinner .rect3 {
+	animation-delay: -1.0s; /* Replaced -webkit- with standard property */
+}
+
+.spinner .rect4 {
+	animation-delay: -0.9s; /* Replaced -webkit- with standard property */
+}
+
+.spinner .rect5 {
+	animation-delay: -0.8s; /* Replaced -webkit- with standard property */
+}
+
+@keyframes stretchdelay {
+	0%, 40%, 100% { 
+	transform: scaleY(0.4);
+	}  
+	20% { 
+	transform: scaleY(1.0);
+	}
+}
